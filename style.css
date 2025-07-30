@@ -1,3 +1,23 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+nav .logo {
+  word-break: break-word;
+}
+
+section {
+  min-width: 0;
+}
+
+
 :root {
   --primary: #1e3a8a;
   --secondary: #fbbf24;
@@ -304,65 +324,42 @@ li {
 
 
 @media (max-width: 768px) {
-  
-  #nav-toggle {
-    display: block;
+  .hero h1 {
+    font-size: 2rem;
   }
-  
-  nav ul {
-    position: fixed;
-    top: 70px;
-    left: 0;
-    right: 0;
-    background: var(--primary);
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  nav {
+    padding: 0.5rem;
     flex-direction: column;
-    padding: 1rem 0;
-    gap: 0;
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    align-items: center;
   }
-  
-  nav ul.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  nav ul li {
-    width: 100%;
+
+  nav .logo {
+    word-break: break-word;
+    font-size: 1.2rem;
     text-align: center;
   }
-  
-  nav ul li a {
-    display: block;
-    padding: 1rem;
-    border-radius: 0;
-  }
-  
-  
-  .hero {
-    padding: 2rem 1rem;
-    min-height: 50vh;
-  }
-  
-  
-  section {
-    margin: 1rem;
-    padding: 1.5rem 1rem;
-  }
-  
-  
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
+
   .card {
     padding: 1rem;
+    font-size: 0.95rem;
+    flex-direction: column;
   }
+
+  .card h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .section {
+    padding: 1rem;
+  }
+}
+
   
   
   .gallery-grid {
@@ -384,34 +381,36 @@ li {
     margin: 0 0.3rem;
     font-size: 1.1rem;
   }
-}
+
 
 @media (max-width: 480px) {
-  
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
   nav {
-    padding: 0 1rem;
+    padding: 0.5rem;
   }
-  
+
   nav .logo {
-    font-size: 1.3rem;
+    word-break: break-word;
   }
-  
-  .hero {
-    padding: 1.5rem 1rem;
-  }
-  
-  section {
-    margin: 0.5rem;
-    padding: 1rem 0.8rem;
-  }
-  
-  .cards {
-    gap: 0.8rem;
-  }
-  
+
   .card {
-    padding: 0.8rem;
+    padding: 1rem;
+    font-size: 0.95rem;
   }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+
   
   .gallery-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -425,7 +424,7 @@ li {
   form {
     max-width: 100%;
   }
-}
+
 
 @media (min-width: 1200px) {
   
